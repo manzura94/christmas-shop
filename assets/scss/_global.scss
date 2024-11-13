@@ -1,0 +1,68 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+    align-items: center;
+    position: relative;
+    background: $text-white;
+    z-index: -3;
+}
+
+[class*='__container'] {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 62px;
+}
+
+[class*='__title'] {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0.18em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $text-white;
+    text-transform: uppercase;
+}
+
+.text-italian {
+    font-family: Allura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $text-white;
+}
+
+.main {
+    flex: 1 1 auto;
+    width: 100%;
+    background-color: #ff4646;
+    z-index: -2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+.black-button {
+    background: $text-dark;
+    color: $text-white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 15%;
+    padding: 20px 32px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background: $hover-dark;
+    }
+}
