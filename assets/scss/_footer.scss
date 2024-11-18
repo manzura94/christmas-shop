@@ -1,0 +1,89 @@
+.footer {
+    padding: 60px 82px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+
+    &__cards {
+        display: flex;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        min-height: 100%;
+        padding: 20px;
+        background: #ecf3f8;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        text-transform: uppercase;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        &:hover {
+            color: #ff4646;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36.48px;
+            letter-spacing: 0.16em;
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24.32px;
+            letter-spacing: 0.08em;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+
+        .text-italian {
+            color: $text-dark;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+                color: #ff4646;
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__contact {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover img {
+            filter: invert(30%) sepia(100%) saturate(649%) hue-rotate(350deg) brightness(92%) contrast(91%);
+        }
+
+        img {
+            transition: filter 0.3s ease;
+        }
+    }
+}
