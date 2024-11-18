@@ -64,4 +64,11 @@
             object-fit: contain;
         }
     }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        align-self: flex-end;
+        
+    }
 }
