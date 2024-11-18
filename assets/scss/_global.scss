@@ -41,8 +41,7 @@
     flex: 1 1 auto;
     width: 100%;
     background-color: #ff4646;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -52,14 +51,28 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
-    letter-spacing: 15%;
+    letter-spacing: 1.8px;
     padding: 20px 32px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    text-align: center;
     text-transform: uppercase;
-
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
     &:hover {
-        background: $hover-dark;
+        background: $text-white;
+        color: $text-dark;
     }
+}
+
+.for-work {
+    color: #4361ff;
+}
+
+.for-health {
+    color: #06a44f;
+}
+
+.for-harmony {
+    color: #ff43f7;
 }

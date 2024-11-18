@@ -9,6 +9,7 @@
             top: 0;
             left: 0;
             object-fit: cover;
+            z-index: 0;
         }
     }
 
@@ -17,6 +18,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+        z-index: 999;
     }
 
     .text-italian {
@@ -69,6 +72,23 @@
         display: flex;
         gap: 20px;
         align-self: flex-end;
-        
     }
+}
+.button-right {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    &:hover img {
+        filter: invert(39%) sepia(100%) saturate(657%) hue-rotate(355deg) brightness(94%) contrast(91%);
+    }
+    &:hover {
+        background-color: white;
+    }
+
+    img {
+        transition: filter 0.3s ease;
+    }
+}
+.button-left {
+    cursor: not-allowed;
 }
