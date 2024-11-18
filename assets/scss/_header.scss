@@ -1,0 +1,54 @@
+.header {
+    width: 100%;
+    color: $text-dark;
+    font-weight: 600;
+    line-height: 15.6px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 64px;
+        width: 100%;
+        padding: 0 82px;
+    }
+
+    &__logo {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 141px;
+        height: 40px;
+        cursor: pointer;
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+    &__menu {
+        &-items {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__menu-item {
+        padding: 12px 20px;
+        margin-left: 8px;
+        border-radius: 12px;
+        transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+        min-width: 78px;
+        height: 40px;
+        cursor: pointer;
+
+        a {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background: #ff46461a;
+            color: #ff4646;
+        }
+    }
+}

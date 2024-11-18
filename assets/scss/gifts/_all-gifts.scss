@@ -1,0 +1,68 @@
+.all-gifts {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+
+    &__banner {
+        position: absolute;
+        top: 0;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        max-width: 426px;
+    }
+
+    &__buttons {
+        display: flex;
+        margin: 20px auto;
+        gap: 8px;
+    }
+
+    &__button {
+        padding: 12px 20px;
+        color: $text-white;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15.6px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        text-transform: uppercase;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.105);
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+.active-menu {
+    background: #ff46461a;
+    color: #ff4646;
+    cursor: unset;
+
+    a {
+        cursor: unset;
+    }
+}
+
+.active-btn {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: unset;
+}
