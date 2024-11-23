@@ -3,8 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@100..900&family=Quicksand:wght@300..700&display=swap');
 
 @import './scss/variables';
-@import './scss/global';
 @import './scss/normalize';
+@import './scss/media-mixin';
+@import './scss/mixin';
+@import './scss/global';
 
 @import './scss/header';
 @import './scss/footer';

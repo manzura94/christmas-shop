@@ -20,10 +20,15 @@
 
     &__title {
         margin: 12px auto 20px;
+        font-size: 24px;
+        line-height: 36.48px;
     }
 
     &__wrap {
         display: flex;
+        flex-wrap: wrap;
+        // align-items: center;
+        justify-content: center;
         gap: 12px;
         position: relative;
         z-index: 999;
