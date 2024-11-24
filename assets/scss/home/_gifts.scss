@@ -23,14 +23,11 @@
         @include flex();
         flex-direction: column;
         z-index: 999;
-
-        * {
-            margin-bottom: 12px;
-        }
+        gap: 12px;
     }
 
     &__title {
-        max-width: 426px;
+        max-width: 450px;
         text-align: center;
     }
 }

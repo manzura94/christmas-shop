@@ -1,9 +1,11 @@
 .coming-soon {
     position: relative;
     min-height: 668px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex();
+
+    @include media(550) {
+        min-height: 704px;
+    }
 
     &__banner {
         img {
@@ -19,6 +21,7 @@
     &__wrapper {
         max-width: 550px;
         display: flex;
+        align-items: center;
         flex-direction: column;
         gap: 20px;
         z-index: 999;
@@ -28,36 +31,37 @@
         font-size: 24px;
         line-height: 36.48px;
         letter-spacing: 0.16em;
+        max-width: 426px;
     }
 
     &__clock {
-        display: flex;
+        @include flex();
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
+       
     }
 
     .clock-wrap {
         display: flex;
-        padding: 8px 12px;
+        padding: 8px 12px 12px;
         background: rgba(255, 255, 255, 0.4);
         border-radius: 20px;
         color: $text-white;
-        gap: 15px;
+        margin-top: 8px;
+        width: 344px;
+        height: 72px;
 
         &__item {
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
-            padding: 5px;
             min-width: 80px;
+            height: 52px;
 
             &:not(:last-child)::after {
                 content: '';
                 position: absolute;
-                right: -10px;
+                right: 0;
                 top: 35%;
                 height: 40%;
                 width: 1px;
@@ -66,15 +70,13 @@
         }
 
         &__days {
-            font-size: 24px;
-            font-weight: 600;
+            @include font(600,24,24);
             line-height: 36.48px;
             letter-spacing: 0.16em;
         }
 
         &__text {
-            font-size: 12px;
-            font-weight: 500;
+            @include font(600,12,12);
             line-height: 15.6px;
             letter-spacing: 0.05em;
             text-transform: uppercase;

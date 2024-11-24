@@ -27,6 +27,13 @@
         a {
             cursor: pointer;
         }
+
+        @include media(1100) {
+            cursor: unset;
+            a {
+                cursor: unset;
+            }
+        }
     }
 
     &__menu {
@@ -56,6 +63,16 @@
         &:hover {
             background: #ff46461a;
             color: #ff4646;
+        }
+        @include media(1100) {
+            cursor: unset;
+            a {
+                cursor: unset;
+            }
+            &:hover {
+                background: unset;
+                color: unset;
+            }
         }
     }
 

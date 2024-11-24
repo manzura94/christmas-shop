@@ -64,6 +64,14 @@
         background: $text-white;
         color: $text-dark;
     }
+
+    @include media(1100) {
+        cursor: unset;
+        &:hover {
+            background: $text-dark;
+            color: $text-white;
+        }
+    }
 }
 
 .for-work {
