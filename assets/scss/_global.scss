@@ -1,9 +1,9 @@
 .wrapper {
-    display: flex;
+    @include flex();
     flex-direction: column;
     overflow: hidden;
     min-height: 100%;
-    align-items: center;
+
     background: $text-white;
 }
 
@@ -15,11 +15,14 @@
 [class*='__wrapper'] {
     padding: 60px 82px;
     margin: 0 auto;
+
+    @include media(980) {
+        padding: 60px 8px;
+    }
 }
 
 [class*='__title'] {
-    font-size: 32px;
-    font-weight: 500;
+    @include font(600, 32, 32);
     line-height: 48px;
     letter-spacing: 0.18em;
     text-align: center;
@@ -29,8 +32,7 @@
 
 .text-italian {
     font-family: Allura;
-    font-size: 24px;
-    font-weight: 400;
+    @include font(400, 24, 24);
     line-height: 24px;
     letter-spacing: 0.05em;
     text-align: center;
@@ -48,10 +50,9 @@
 .black-button {
     background: $text-dark;
     color: $text-white;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    letter-spacing: 1.8px;
+    @include font(600, 12, 12);
+    line-height: 15.6px;
+    letter-spacing: 0.8px;
     padding: 20px 32px;
     border: none;
     border-radius: 20px;
@@ -62,6 +63,14 @@
     &:hover {
         background: $text-white;
         color: $text-dark;
+    }
+
+    @include media(1100) {
+        cursor: unset;
+        &:hover {
+            background: $text-dark;
+            color: $text-white;
+        }
     }
 }
 
