@@ -14,16 +14,19 @@
     }
 
     &__wrapper {
-        display: flex;
+        @include flex();
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         position: relative;
         z-index: 999;
     }
 
     .text-italian {
         margin-bottom: 12px;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 36.48px;
     }
 
     &__wrap {
@@ -48,8 +51,7 @@
     }
 
     &__text {
-        font-size: 80px;
-        font-weight: 600;
+        @include font(600, 80, 80);
         line-height: 97.52px;
         text-align: center;
         color: $text-white;
@@ -82,13 +84,28 @@
         filter: invert(39%) sepia(100%) saturate(657%) hue-rotate(355deg) brightness(94%) contrast(91%);
     }
     &:hover {
-        background-color: white;
+        background-color: $text-white;
     }
 
     img {
         transition: filter 0.3s ease;
     }
+
+    @include media(1100) {
+        cursor: unset;
+        &:hover {
+            background-color: unset;
+        }
+
+        &:hover img {
+            filter: unset;
+        }
+    }
 }
 .button-left {
     cursor: not-allowed;
+
+    @include media(1100) {
+        cursor: unset;
+    }
 }

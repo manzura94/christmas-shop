@@ -16,14 +16,19 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
+        z-index: 999;
     }
 
     &__title {
         margin: 12px auto 20px;
+        font-size: 24px;
+        line-height: 36.48px;
     }
 
     &__wrap {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 12px;
         position: relative;
         z-index: 999;
@@ -45,9 +50,15 @@
         color: #ff4646;
     }
 
+    @include media(1100) {
+        cursor: unset;
+        &:hover .item-subtitle {
+            color: unset;
+        }
+    }
+
     &-text {
-        font-size: 12px;
-        font-weight: 600;
+        @include font(600, 12, 12);
         line-height: 15.6px;
         letter-spacing: 0.05em;
         text-align: left;
@@ -55,8 +66,7 @@
     }
 
     &-subtitle {
-        font-size: 16px;
-        font-weight: 600;
+        @include font(600, 16, 16);
         line-height: 24.32px;
         letter-spacing: 0.08em;
         text-align: left;

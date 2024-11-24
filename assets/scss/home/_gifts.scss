@@ -1,10 +1,12 @@
 .gifts {
     position: relative;
     overflow: hidden;
-    min-height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 524px;
+    @include flex();
+
+    @include media(568) {
+        min-height: 572px;
+    }
 
     &__banner {
         img {
@@ -18,19 +20,14 @@
     }
 
     &__wrapper {
-        display: flex;
+        @include flex();
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         z-index: 999;
-
-        * {
-            margin-bottom: 12px;
-        }
+        gap: 12px;
     }
 
     &__title {
-        max-width: 426px;
+        max-width: 450px;
         text-align: center;
     }
 }

@@ -1,0 +1,42 @@
+@mixin flex($alignItem: center, $justifyContent: center) {
+    display: flex;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+}
+
+@mixin font( $weight, $size, $min_size, ) {
+    font-weight: $weight;
+    @include adaptive-value('font-size', $size, $min_size, 1);
+}
+
+$maxWidth: 1440; 
+$midWidth: 768;  
+$minWidth: 380;  
+
+@mixin adaptive-value($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type == 1 {
+
+        #{$property}: $startSize + px;
+
+        @media (max-width: #{$maxWidth + px}) {
+            #{$property}: calc(
+                #{$minSize + px} + #{$addSize} *
+                ((100vw - #{$midWidth + px}) / (#{$maxWidth - $midWidth}))
+            );
+        }
+
+
+        @media (max-width: #{$midWidth + px}) {
+            #{$property}: $minSize + px;
+        }
+    } else {
+
+        #{$property}: calc(
+            #{$minSize + px} +
+            #{$addSize} *
+            ((100vw - #{$midWidth + px}) / (#{$maxWidth - $midWidth}))
+        );
+    }
+}

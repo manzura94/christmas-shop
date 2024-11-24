@@ -1,22 +1,25 @@
 .header {
     width: 100%;
-    color: $text-dark;
-    font-weight: 600;
-    line-height: 15.6px;
 
     &__wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(center, space-between);
+        @include adaptive-value('padding-left', 82, 8, 1);
+        @include adaptive-value('padding-right', 82, 8, 1);
         min-height: 64px;
+        max-height: 64px;
         width: 100%;
-        padding: 0 82px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        @include font(600, 12, 12);
+        line-height: 15.6px;
+        text-transform: uppercase;
+        color: $text-dark;
+        letter-spacing: 0.6px;
     }
 
     &__logo {
-        display: flex;
+        @include flex(center, center);
         gap: 10px;
-        align-items: center;
         width: 141px;
         height: 40px;
         cursor: pointer;
@@ -24,16 +27,27 @@
         a {
             cursor: pointer;
         }
+
+        @include media(1100) {
+            cursor: unset;
+            a {
+                cursor: unset;
+            }
+        }
     }
 
     &__menu {
+        @include media(769) {
+            display: none;
+        }
+
         &-items {
-            display: flex;
-            align-items: center;
+            @include flex();
         }
     }
 
     &__menu-item {
+        @include flex();
         padding: 12px 20px;
         margin-left: 8px;
         border-radius: 12px;
@@ -49,6 +63,25 @@
         &:hover {
             background: #ff46461a;
             color: #ff4646;
+        }
+        @include media(1100) {
+            cursor: unset;
+            a {
+                cursor: unset;
+            }
+            &:hover {
+                background: unset;
+                color: unset;
+            }
+        }
+    }
+
+    .burger__menu {
+        display: none;
+        @include media(769) {
+            display: block;
+            width: 40px;
+            height: 40px;
         }
     }
 }

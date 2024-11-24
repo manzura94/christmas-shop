@@ -1,5 +1,4 @@
 .footer {
-    padding: 60px 82px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -10,6 +9,10 @@
         display: flex;
         gap: 12px;
         width: 100%;
+
+        @include media(1120) {
+            flex-direction: column;
+        }
     }
 
     .card {
@@ -18,10 +21,9 @@
         padding: 20px;
         background: #ecf3f8;
         border-radius: 20px;
-        display: flex;
+        @include flex();
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
         text-align: center;
         gap: 12px;
         text-transform: uppercase;
@@ -31,27 +33,30 @@
             color: #ff4646;
         }
 
+        @include media(1100) {
+            cursor: unset;
+            &:hover {
+                color: unset;
+            }
+        }
+
         &-title {
-            font-size: 24px;
-            font-weight: 600;
+            @include font(600, 24, 24);
             line-height: 36.48px;
             letter-spacing: 0.16em;
         }
 
         &-text {
-            font-size: 16px;
-            font-weight: 600;
+            @include font(600, 16, 16);
             line-height: 24.32px;
             letter-spacing: 0.08em;
         }
     }
 
     &__bottom {
-        display: flex;
+        @include flex();
         flex-direction: column;
         gap: 12px;
-        justify-content: center;
-        align-items: center;
 
         .text-italian {
             color: $text-dark;
@@ -60,6 +65,13 @@
 
             &:hover {
                 color: #ff4646;
+            }
+
+            @include media(1100) {
+                cursor: unset;
+                &:hover {
+                    color: unset;
+                }
             }
         }
     }
@@ -73,9 +85,7 @@
     &__contact {
         width: 40px;
         height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex();
         cursor: pointer;
 
         &:hover img {
@@ -84,6 +94,13 @@
 
         img {
             transition: filter 0.3s ease;
+        }
+
+        @include media(1100) {
+            cursor: unset;
+            &:hover img {
+                filter: unset;
+            }
         }
     }
 }
