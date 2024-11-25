@@ -1,0 +1,33 @@
+.gifts {
+    position: relative;
+    overflow: hidden;
+    min-height: 524px;
+    @include flex();
+
+    @include media(568) {
+        min-height: 572px;
+    }
+
+    &__banner {
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__wrapper {
+        @include flex();
+        flex-direction: column;
+        z-index: 999;
+        gap: 12px;
+    }
+
+    &__title {
+        max-width: 450px;
+        text-align: center;
+    }
+}
