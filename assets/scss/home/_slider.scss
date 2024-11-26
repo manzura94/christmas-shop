@@ -91,7 +91,7 @@
         transition: filter 0.3s ease;
     }
 
-    @include media(1100) {
+    @include media(500) {
         cursor: unset;
         &:hover {
             background-color: unset;
@@ -105,7 +105,7 @@
 .button-left {
     cursor: not-allowed;
 
-    @include media(1100) {
+    @include media(500) {
         cursor: unset;
     }
 }

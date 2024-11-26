@@ -33,7 +33,7 @@
             color: #ff4646;
         }
 
-        @include media(1100) {
+        @include media(500) {
             cursor: unset;
             &:hover {
                 color: unset;
@@ -67,7 +67,7 @@
                 color: #ff4646;
             }
 
-            @include media(1100) {
+            @include media(500) {
                 cursor: unset;
                 &:hover {
                     color: unset;
@@ -96,7 +96,7 @@
             transition: filter 0.3s ease;
         }
 
-        @include media(1100) {
+        @include media(500) {
             cursor: unset;
             &:hover img {
                 filter: unset;
