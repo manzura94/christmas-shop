@@ -65,7 +65,7 @@
         color: $text-dark;
     }
 
-    @include media(1100) {
+    @include media(500) {
         cursor: unset;
         &:hover {
             background: $text-dark;

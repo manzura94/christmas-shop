@@ -28,7 +28,7 @@
             cursor: pointer;
         }
 
-        @include media(1100) {
+        @include media(500) {
             cursor: unset;
             a {
                 cursor: unset;
@@ -64,7 +64,7 @@
             background: #ff46461a;
             color: #ff4646;
         }
-        @include media(1100) {
+        @include media(500) {
             cursor: unset;
             a {
                 cursor: unset;
@@ -78,7 +78,7 @@
 
     .burger__menu {
         display: none;
-        @include media(769) {
+        @include media(768) {
             display: block;
             width: 40px;
             height: 40px;
