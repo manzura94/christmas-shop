@@ -1,0 +1,87 @@
+.all-gifts {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+
+    &__banner {
+        position: absolute;
+        top: 0;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        max-width: 426px;
+    }
+
+    &__buttons {
+        display: flex;
+        margin: 20px auto;
+        gap: 8px;
+    }
+
+    &__button {
+        padding: 12px 20px;
+        color: $text-white;
+        @include font(500, 12, 12);
+        line-height: 15.6px;
+        letter-spacing: 0.6px;
+        text-align: left;
+        text-transform: uppercase;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: background-color 0.5s ease;
+
+        @include media(500) {
+            padding: 12px 8px;
+        }
+        &:hover {
+            background: rgba(255, 255, 255, 0.105);
+        }
+
+        @include media(500) {
+            cursor: unset;
+            &:hover {
+                background: unset;
+            }
+        }
+    }
+
+    &__wrap {
+        @include flex();
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .item__image {
+        @include flex();
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.active-menu {
+    background: #ff46461a;
+    color: #ff4646;
+    cursor: unset;
+
+    a {
+        cursor: unset;
+    }
+}
+
+.active-btn {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: unset;
+}

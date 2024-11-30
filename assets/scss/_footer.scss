@@ -1,0 +1,106 @@
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+
+    &__cards {
+        display: flex;
+        gap: 12px;
+        width: 100%;
+
+        @include media(1120) {
+            flex-direction: column;
+        }
+    }
+
+    .card {
+        width: 100%;
+        min-height: 100%;
+        padding: 20px;
+        background: #ecf3f8;
+        border-radius: 20px;
+        @include flex();
+        flex-direction: column;
+
+        text-align: center;
+        gap: 12px;
+        text-transform: uppercase;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        &:hover {
+            color: #ff4646;
+        }
+
+        @include media(500) {
+            cursor: unset;
+            &:hover {
+                color: unset;
+            }
+        }
+
+        &-title {
+            @include font(600, 24, 24);
+            line-height: 36.48px;
+            letter-spacing: 0.16em;
+        }
+
+        &-text {
+            @include font(600, 16, 16);
+            line-height: 24.32px;
+            letter-spacing: 0.08em;
+        }
+    }
+
+    &__bottom {
+        @include flex();
+        flex-direction: column;
+        gap: 12px;
+
+        .text-italian {
+            color: $text-dark;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+                color: #ff4646;
+            }
+
+            @include media(500) {
+                cursor: unset;
+                &:hover {
+                    color: unset;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__contact {
+        width: 40px;
+        height: 40px;
+        @include flex();
+        cursor: pointer;
+
+        &:hover img {
+            filter: invert(30%) sepia(100%) saturate(649%) hue-rotate(350deg) brightness(92%) contrast(91%);
+        }
+
+        img {
+            transition: filter 0.3s ease;
+        }
+
+        @include media(500) {
+            cursor: unset;
+            &:hover img {
+                filter: unset;
+            }
+        }
+    }
+}
